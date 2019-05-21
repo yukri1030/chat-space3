@@ -15,11 +15,9 @@
       .leftside
         .leftside--group1
           - current_user.groups.each do |group|
-          = link_to group_messages_path(group) do
-          .leftside--sample
-             = group.name
-        .leftside--group2ルーム２
-        .leftside--group3サンプル
+            = link_to group_messages_path(group) do
+              .leftside--sample
+              = group.name
   .right
     .main
       .main__header
