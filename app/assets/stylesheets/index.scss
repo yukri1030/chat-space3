@@ -10,23 +10,23 @@
   .flash-box{
     height: 30px;
     width: 100%;
-    background: rgb(199, 199, 241);
     position: fixed;
     top: 0;
     left: 0;
     float: left;
-
+    
   }
   .wrapper{
     width: 300px;
     height: 100vh;
-    margin-top: 30px;
     background-color:#2F3E51;
     float: left;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+    padding-top: 20px;
+    // margin-top: 20px;
 
     &--leftside{
       height: 20%;
@@ -53,12 +53,16 @@
 
       &--icon{
         height: 20px;
-        width: 20px;
+        width: 20px; 
         float: right;
+        
         }
       }
     }
 
+    .icon{
+      color: white;
+    }
       .leftside{
         height: 800px;
         width: 300px;
