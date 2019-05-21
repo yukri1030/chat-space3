@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     float: left;
-
+    
   }
   .wrapper{
     width: 300px;
@@ -26,6 +26,7 @@
     left: 0;
     z-index: 1;
     padding-top: 20px;
+    // margin-top: 20px;
 
     &--leftside{
       height: 20%;
@@ -53,12 +54,15 @@
       &--icon{
         height: 20px;
         width: 20px; 
-        color: white;
         float: right;
+        
         }
       }
     }
 
+    .icon{
+      color: white;
+    }
       .leftside{
         height: 800px;
         width: 300px;
