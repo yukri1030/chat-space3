@@ -1,0 +1,38 @@
+.oya
+  .flash-box 
+  .wrapper
+    .wrapper--leftside
+      .wrapper--leftside--btn
+        .wrapper--leftside--btn--name
+          = current_user.name
+        %ul.wrapper--leftside--icon
+          %list.wrapper--leftside--icon--edit
+            = link_to new_group_path do
+              = fa_icon 'pencil-square-o', class: 'icon'
+          %list.wrapper--leftside--icon--new
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'cog', class: 'icon'
+      .leftside
+        .leftside--group1
+          - current_user.groups.each do |group|
+            = link_to group_messages_path(group) do
+              .leftside--sample
+              = group.name
+  .right
+    .main
+      .main__header
+        .main__header--name ルーム１
+        .main___header--member メンバー：綾子
+      .main--edit Edit    
+    .center
+      .ceter_messages
+        .center__messages--user こんにちは
+        .center__messages--info ルーム１
+    .footer
+      .footer--box
+        .footer--box--text 
+          %input.footer--box--text--input-box{placeholder: "type a message"}
+            %label.footer--box--text--input-box--upload-label
+              %footer--box--text--input-box--upload-label--i.fa.fa-picture-o
+              %input.hidden{type: 'file'}
+        %submit.footer--box--send-btn Send 
