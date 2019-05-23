@@ -15,9 +15,11 @@
         
         = form_for [@group, @message] do |f|
           = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      -#     %label.footer--box--text--input-box--upload-label
-      -#     -# = f.label :image, class: 'form__mask__image' do
-      -#       %footer--box--text--input-box--upload-label--i.fa.fa-picture-o
-      -#       = fa_icon 'picture-o', class: 'icon'
-      -#       %input.hidden{type: 'file'}
-      -# %submit.footer--box--send-btn Send 
+          %label.footer--box--text--input-box--upload-label
+          = f.label :image, class: 'form__mask__image' do
+            -# %footer--box--text--input-box--upload-label--i.fa.fa-picture-o
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+            -# %input.hidden{type: 'file'}
+          -# = f.submit.footer--box--send-btn Send 
+          = f.submit 'Send', class: 'form__submit'
