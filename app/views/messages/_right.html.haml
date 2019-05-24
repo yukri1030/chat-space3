@@ -7,7 +7,7 @@
     .main--edit Edit    
   .center
     - @messages.each do |message|
-      = render partial: "messages/center", locals: { message: message }
+      = render partial: "messages/message", locals: { message: message }
 
     -# = render partial: 'center', collection: @messages
   -#   .ceter_messages
