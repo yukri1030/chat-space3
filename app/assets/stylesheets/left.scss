@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  color: white;
 }
 // .oya{
 //   width: 100%;
@@ -36,7 +37,7 @@
       color: #ffffff;
       float: left; 
       overflow: scroll;
-      padding: 0 0 0 20px;
+      // padding: 0 0 0 20px;
 
       &--btn{
         height: 150px;
@@ -74,12 +75,12 @@
         width: 280px;
         font-size:16px;
         color: #2F3E33;
-        // padding: 0 0 0 20px;
+        padding: 0 0 0 20px;
 
         &--group1{
           height: 50px;
           width: 280px;
-          font-size: 20px;
+          font-size: 15px;
           color: white;
           line-height: 50px;       
         
@@ -94,6 +95,7 @@
             height: 50px;
             width: 280px;
             line-height:50px;
+            font-size: 10px;
             color: black;
           }
         }
