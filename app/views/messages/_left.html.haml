@@ -14,6 +14,6 @@
       - current_user.groups.each do |group|
         = link_to group_messages_path(group) do
           .leftside--sample
-          = group.name
+            = group.name
           .leftside--message
-          = group.show_last_message
+            = group.show_last_message
