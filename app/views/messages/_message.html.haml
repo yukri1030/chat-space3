@@ -1,0 +1,10 @@
+.ceter_messages
+  .center__messages--user-name 
+    = message.user.name
+  .center__messages--info 
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .center__messages--tubuyaki
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
