@@ -1,0 +1,35 @@
+.right
+  .main
+    .main__header
+      .main__header--name 
+        = @group.name
+      %ul.main__header--member 
+        member 
+        - @group.users.each do |member|
+          %li.main__header--member_name
+          =  member.name
+    .main--edit Edit    
+  .center
+    - @messages.each do |message|
+      = render partial: "messages/message", locals: { message: message }
+
+    -# = render partial: 'center', collection: @messages
+  -#   .ceter_messages
+  -#     .center__messages--user-name
+  -#     = message.user.name
+  -#     .center__messages--info ルーム１
+  .footer
+    .footer--box
+      .footer--box--text 
+        -# %input.footer--box--text--input-box{placeholder: "type a message"}
+        
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          %label.footer--box--text--input-box--upload-label
+          = f.label :image, class: 'form__mask__image' do
+            -# %footer--box--text--input-box--upload-label--i.fa.fa-picture-o
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+            -# %input.hidden{type: 'file'}
+          -# = f.submit.footer--box--send-btn Send 
+          = f.submit 'Send', class: 'form__submit'
