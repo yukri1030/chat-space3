@@ -100,44 +100,45 @@
       position: relative;
       clear: both;
       padding: 40px 40px;
-
-        &__message{
-          height: 50px;
-          width: 70%;
-          padding-left: 10px;
-          color: #434A54;
-          float: left;
-         
-        }
-      &__mask{
-        
-        &__image{
-          margin: 10px 10px;
-          height: 20px;
-          width: 20px;
-        }
-
-          .icon{
-          height: 20px;
-          width: 20px;
-          padding: 15px;
-          text-align: center;
-          color: black;
-          display: inline;
-          }  
-        
-      
+      &__message{
+        height: 50px;
+        width: 80%;
+        padding-left: 10px;
+        color: #434A54;
+        float: left;
+        border: none;
       }
-
-          &__submit{
-          height: 50px;
-          width: 10%;
-          background-color: #38AEF0;
-          text-align: center;
-          line-height: 50px;
-          color: black; 
-          right: 0;
-          }
-      }    
+      &__mask{
+        float: left;
+        height: 50px;
+        background-color: white;
+        &__image{
+         
+          height: 20px;
+          width: 20px;
+          background-color: white;
         
-}
+          .icon{
+            height: 20px;
+            width: 20px;
+            padding:  0 10px;
+            text-align: center;
+            color: black;
+            display: inline;
+          } 
+        }
+      }
+      &__submit{
+        height: 50px;
+        width: 70px;
+        background-color: #38AEF0;
+        text-align: center;
+        line-height: 50px;
+        color: black; 
+        right: 0;
+      }      
+    } 
+  }  
+    
+    
+  
