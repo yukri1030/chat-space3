@@ -40,7 +40,6 @@ $(function(){
       var html = buildHTML(message);
       $('.center').append(html);
       $('.center').animate({scrollTop: $('.center')[0].scrollHeight}, 'fast');
-
       $('.form__submit').prop('disabled', false)
       $('.new_message')[0].reset();
     })
