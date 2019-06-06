@@ -41,7 +41,7 @@ $(function(){
       $('.center').append(html);
       $('.center').animate({scrollTop: $('.center')[0].scrollHeight}, 'fast');
 
-      $('.form__submit').prop('disabled', false).empty("");
+      $('.form__submit').prop('disabled', false)
       $('.form__message').val("");
     })
     .fail(function() {
