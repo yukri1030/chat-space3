@@ -1,26 +1,28 @@
+$(document).on('turbolinks:load', function(){
 $(function(){
 
-  function buildHTML(data) {
+  function buildHTML(message) {
+    var image = message.image? `${message.image}` : "";
+    var html = `<div class ="center__messages">
+                  <div class ="center__messages--user-name">
+                  ${message.user_name}
+                  </div>
+                  <div class = "center__messages--info">
+                  ${message.time}
+                  </div>
+                  <div class = "center-messages--tubuyaki">
+                    <div class = "lower-message__content">
+                    ${message.content}
+                    </div>
+                    <img class ="lower-message__image" src="${image}">
+                    </div>
+                  </div>
+               </div>`
 
-    var html = `<p>
-                    <strong>
-                      <a href=/groups/${message.user_id}>${message.user_name}</a>
-                      ：
-                    </strong>
-                    ${message.text}
-
-                    <strong>
-                    ${message.image}
-                    </strong>
-                  </p>`
-    
-    // $('<div class="center__messages--tubuyaki">');
-
-    
     return html
   }
   
-  // .append(data.content)
+ 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -33,15 +35,18 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data) {
-      var html = buildHTML(data);
-      $('.canter__messages--user-name').append(html);
-      $('.center__messages--tubuyaki').append(html);
-      $('.center__messages--image').append(html);
-      textField.val('');
+
+    .done(function(message) {
+      var html = buildHTML(message);
+      $('.center').append(html);
+      $('.center').animate({scrollTop: $('.center')[0].scrollHeight}, 'fast');
+
+      $('.form__submit').prop('disabled', false).empty("");
+      $('.form__message').val("");
     })
     .fail(function() {
       alert('error');
     });
   })
 })
+});
