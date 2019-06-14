@@ -14,11 +14,10 @@
     .chat-group-form__field--left
       %label.chat-group-form__label{:for => "chat_group_チャットメンバーを追加"} チャットメンバーを追加
     .chat-group-form__field--right
-      %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
+      %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
       .chat-group-form__search.clearfix 
         #user-search-result
           #chat-group-user-22.chat-group-user.clearfix
-            %input{:name => "chat_group[user_ids][]", :type => "hidden", :value => ""}/
             .user-search-add.chat-group-user__btn.chat-group-user__btn--add{"data-user-id" => "", "data-user-name" => ""} 
             %p.chat-group-user__name 
   .chat-group-form__field.clearfix
@@ -29,9 +28,9 @@
         %input{:type => "hidden", :id => current_user.id, :value => current_user.name}
         %p.chat-group-user__name
           = current_user.name
-      - group.users.each do |user|
+      - @group.users.each do |user|
+        %input{:name => "group[user_ids][]", :type => "hidden", :value => user.id}
         - if user.id != current_user.id
-          %input{:name => "group[user_ids][]", :type => "hidden", :value => user.name}
           %p.chat-group-user__name
             = user.name
   .chat-group-form__field.clearfix
