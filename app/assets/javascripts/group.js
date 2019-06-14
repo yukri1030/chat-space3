@@ -7,7 +7,7 @@ $(document).on('turbolinks:load', function(){
                   <div class="chat-group-user clearfix">
                     <div id ="chat-group-users">
                       <p><chat-group-user__name">${user.name}
-                      <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id=${user.id}" data-user-name=${user.name}>追加</a></p>
+                      <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name=${user.name}>追加</a></p>
                     </div>
                   </div>
                 </div>`
@@ -48,7 +48,6 @@ $(document).on('turbolinks:load', function(){
 
       .done(function(users) {
         $("#user-search-result").empty();
-        console.log(users)
         if (users.length !== 0) {
           users.forEach(function(user){
             appendUser(user);
@@ -65,9 +64,7 @@ $(document).on('turbolinks:load', function(){
       })
     });
 
-    $(document).on("click",'.user-search-add',function () {
-      console.log("aaa")
-     
+    $(document).on("click",'.user-search-add',function () { 
       var userId = $(this).attr('data-user-id');
       var userName = $(this).data('user-name');
       appendMember(userId, userName)
