@@ -7,19 +7,18 @@
 
 
   .main{
-    height: 20%;
+    height: 18%;
 
 
     &__header{
-      height:50px;
-      width: 200px;
+      width: 400px;
       padding: 20px 20px;
       float: left;
       color: black;
 
       &--name{
         line-height: 55px;
-        padding: 35px 15px 0 20px;
+        padding: 35px 15px 15px 20px;
         font-size: 20px;
         color: black;
         font-family: bold;    
@@ -28,7 +27,6 @@
       &--member {
         display: flex;
         line-height: 12px;
-        // padding: 0 20px;
         line-height: 27px;  
         color: gray;
         
@@ -50,11 +48,14 @@
       color: lightskyblue;
       border: 1px solid lightskyblue; 
       }  
+    a{
+      color: black;
+    }
     }
 
     .center{
       overflow: auto;
-      height: 65%;
+      height: 67%;
       width: 100%;
       background-color: #fafafa;
       float: right;
