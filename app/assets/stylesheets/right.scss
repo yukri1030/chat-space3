@@ -7,7 +7,7 @@
 
 
   .main{
-    height: 20%;
+    height: 18%;
 
 
     &__header{
@@ -28,7 +28,6 @@
       &--member {
         display: flex;
         line-height: 12px;
-        // padding: 0 20px;
         line-height: 27px;  
         color: gray;
         
@@ -50,11 +49,14 @@
       color: lightskyblue;
       border: 1px solid lightskyblue; 
       }  
+    a{
+      color: black;
+    }
     }
 
     .center{
       overflow: auto;
-      height: 65%;
+      height: 67%;
       width: 100%;
       background-color: #fafafa;
       float: right;
