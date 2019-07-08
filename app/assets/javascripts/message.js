@@ -76,7 +76,8 @@ $(function(){
 
   $(function(){
    
-  var reloadMessages= function() {
+  var reloadMessages= function() {if (window.location.href.match(/\/groups\/\d+\/messages/)){
+  
     var group_id = $('.center__messages:last').attr('group_id');
     var path = `/groups/${group_id}/api/messages`
     var messageId = $('.center__messages:last').attr('message_id');
@@ -96,6 +97,7 @@ $(function(){
     .fail(function() {
       console.log('error');
     });
+  }
   }
   setInterval(reloadMessages, 5000);
 });
