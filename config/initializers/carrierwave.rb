@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1' 
   }
 
-  config.fog_directory  = 'yukariabe'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/yukariabe'
+  config.fog_directory  = 'deploy-yukari'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/deploy-yukari'
 end
